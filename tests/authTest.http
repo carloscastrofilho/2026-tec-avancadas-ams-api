@@ -1,5 +1,5 @@
 ### Variáveis Globais
-@baseUrl = http://localhost:3500
+@baseUrl = http://localhost:3450
 @username = carlao_admin
 @password = fatec123
 

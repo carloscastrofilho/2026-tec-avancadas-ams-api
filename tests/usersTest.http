@@ -1,10 +1,12 @@
 ### Variáveis Globais
-@baseUrl = http://localhost:3500
-@username = Marcos Junior
+@baseUrl = http://localhost:3600/api
+@username = teste login
 @password = teste123
 
+@idtest = 2
+
 ### 1. Criar um novo usuário (Sign Up)
-POST {{baseUrl}}/user
+POST {{baseUrl}}/users
 Content-Type: application/json
 
 {
@@ -26,15 +28,18 @@ Content-Type: application/json
 @authToken = {{login.response.body.token}}
 
 ### 3. Listar Usuários (Rota Protegida)
-GET {{baseUrl}}/user
+GET {{baseUrl}}/users
 Authorization: Bearer {{authToken}}
 
+###
+GET {{baseUrl}}/users
+
 ### 4. Deletar um Usuário (Troque o ID pelo desejado)
-DELETE {{baseUrl}}/user/1
+DELETE {{baseUrl}}/users/{{idtest}}
 Authorization: Bearer {{authToken}}
 
 ### 5. update um Usuário (Troque o ID pelo desejado)
-PUT {{baseUrl}}/user/3
+PUT {{baseUrl}}/users/{{idtest}}
 Authorization: Bearer {{authToken}}
 Content-Type: application/json
 
@@ -44,5 +49,5 @@ Content-Type: application/json
 }
 
 ### 6. GETBYID um Usuário (Busca o ID pelo desejado)
-GET {{baseUrl}}/user/3
+GET {{baseUrl}}/users/{{idtest}}
 Authorization: Bearer {{authToken}}

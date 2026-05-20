@@ -1,0 +1,32 @@
+### Variáveis Globais
+@baseUrl = http://localhost:3600/api
+
+@idtest = 3
+
+### 1. Criar um novo usuário (Sign Up)
+POST {{baseUrl}}/estados
+Content-Type: application/json
+
+ {
+    "estado": "rio de janeiro",
+    "uf": "RJ"
+  }
+
+
+### 3. Listar Usuários (Rota Protegida)
+GET {{baseUrl}}/estados
+
+### 4. Deletar um Usuário (Troque o ID pelo desejado)
+DELETE {{baseUrl}}/estados/{{idtest}}
+
+### 5. update um Usuário (Troque o ID pelo desejado)
+PUT {{baseUrl}}/estados/{{idtest}}
+Content-Type: application/json
+
+{
+    "estado": "Rio de Janerio",
+    "uf": "RJ"
+}
+
+### 6. GETBYID um Usuário (Busca o ID pelo desejado)
+GET {{baseUrl}}/estados/{{idtest}}
