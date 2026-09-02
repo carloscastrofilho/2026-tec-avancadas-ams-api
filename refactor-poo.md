@@ -1,7 +1,7 @@
 ---
 marp: true
 ---
-
+## Refatoramento para sala de aula 02/09/2026
 
 * Para evoluir a aplicação procedural para Orientação a Objetos (POO) com bons padrões de projeto (Design Patterns), a estrutura recomendada separa as responsabilidades em camadas claras: 
 **Database Manager** (Singleton para o Connection Pool);
