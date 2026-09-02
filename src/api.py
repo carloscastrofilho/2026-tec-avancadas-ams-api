@@ -1,5 +1,6 @@
 from flask import Flask
 from src.utils.config import Config
+from src.controllers.estado_controller import EstadoAPI
 
 class Api:
     # atributo de classe
@@ -21,7 +22,26 @@ class Api:
         
         # instância do flask
         self.app = Flask(self.cfg.APP_NAME)
-      
+        self._register_routes()
+        
+    def _register_routes(self):
+        # Mapeamento do Class-Based View
+        estado_view = EstadoAPI.as_view('estado_api')
+                
+        # Rota para coleção (GET all, POST)
+        self.app.add_url_rule(
+            '/api/estados', 
+            view_func=estado_view, 
+            methods=['GET', 'POST']
+        )
+        
+        # Rota para item específico (GET id, PUT, DELETE)
+        self.app.add_url_rule(
+            '/api/estados/<int:id>', 
+            view_func=estado_view, 
+            methods=['GET', 'PUT', 'DELETE']
+        )
+  
         
     # metodos
     def run(self):  

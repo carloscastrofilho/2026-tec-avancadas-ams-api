@@ -276,3 +276,18 @@ class Api:
 * **Inversão e Separação de Controle:** Cada classe possui uma única responsabilidade (SRP - *Single Responsibility Principle*).
 * **Consistência nos Retornos:** Tratamento explícito dos status HTTP adequados (`200 OK`, `201 Created`, `404 Not Found`, `400 Bad Request`).
 * **Testabilidade:** Fica mais simples aplicar testes unitários com *mocks* injetando um repositório fictício no controller.
+
+---
+Banco de dados
+
+database3:
+
+```sql
+CREATE DATABASE apitest;
+
+CREATE TABLE estados (
+	id int not null AUTO_INCREMENT PRIMARY KEY,
+    estado VARCHAR(60) NULL,
+    uf VARCHAR(2) NULL
+);
+```
