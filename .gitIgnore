@@ -1,0 +1,5 @@
+## pastas a ignorar no projeto
+myvirtual/
+
+# não vair carregar no git o arquivos .env
+.env
