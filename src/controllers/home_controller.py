@@ -10,7 +10,7 @@ class HomeController(MethodView):
     def get(self):
         return jsonify({
         "status": "success",
-        "message": "Bem-vindo à API Orientada a Objetos"
+        "message": "Bem-vindo a API Orientada a Objetos"
         }), 200
 
 
