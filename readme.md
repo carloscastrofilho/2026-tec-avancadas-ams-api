@@ -11,14 +11,20 @@ python -m venv myvirtual
 ```bash
 source .\myvirtual\Scripts\activate
 ```
-Atualiza o pip para versão mais recente
-python.exe -m pip install --upgrade pip
+    2.1 Atualiza o pip para versão mais recente
 
+    ```bash
+    python.exe -m pip install --upgrade pip
+    ```
+    
 3. para instalar as dependencias
 ```bash
 pip install -r requeriments.txt
 ```
-
+* para atualizar o pip
+```
+python.exe -m pip install --upgrade pip
+```
 4. para rodar o projeto execute:
 ```bash
 py server.py
