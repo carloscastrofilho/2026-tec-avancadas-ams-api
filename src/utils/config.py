@@ -7,8 +7,7 @@ class Config:
     
     APP_NAME = os.getenv("APP_NAME")
     APP_PORT = int(os.getenv("APP_PORT", 3000))
-    APP_DEBUG = os.getenv("APP_DEBUG") == "True"
-    
+    APP_DEBUG = os.getenv("APP_DEBUG") == "True"    
     DB_TYPE =  "mysql"
     DB_HOST = os.getenv("DB_HOST")
     DB_PORT = os.getenv("DB_PORT", 3306)
