@@ -1,5 +1,5 @@
 from src.databases.connection import Database
-from src.models.estados_model import Estado
+from src.models.estado_model import Estado
 from typing import List, Optional
 
 class EstadoRepository:

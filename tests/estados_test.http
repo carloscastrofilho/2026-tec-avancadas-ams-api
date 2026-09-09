@@ -1,26 +1,26 @@
 
-GET http://localhost:3000/api/estados
+GET http://localhost:3000/api/v1/estados
 ###
-GET http://localhost:3000/api/estados/1
+GET http://localhost:3000/api/v1/estados/4
 
 ###
-POST http://localhost:3000/api/estados
+POST http://localhost:3000/api/v1/estados
+Content-Type: application/json
+sss
+{
+    "estado": "Espirito Santo",
+    "uf" : "ES"
+}
+
+
+###
+PUT http://localhost:3000/api/v1/estados/1
 Content-Type: application/json
 
 {
-    "estado": "São Paulo",
+    "estado": "Sao Paulo",
     "uf" : "SP"
 }
 
-
 ###
-PUT http://localhost:3000/api/estados/1
-Content-Type: application/json
-
-{
-    estado: "São Paulo",
-    uf : "SP"
-}
-
-###
-DELETE http://localhost:3000/api/estados/1
+DELETE http://localhost:3000/api/v1/estados/1

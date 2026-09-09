@@ -1,14 +1,13 @@
 from flask import request, jsonify
 from flask.views import MethodView
 from src.repositories.estado_repository import EstadoRepository
-from src.models.estados_model import Estado
+from src.models.estado_model import Estado
 
-class EstadoAPI(MethodView):
+class EstadoController(MethodView):
     def __init__(self):
         self.repository = EstadoRepository()
 
-    def get(self, id=None):
-        
+    def get(self, id=None):        
         if id is None:
             estados = self.repository.get_all()
             return jsonify([e.to_dict() for e in estados]), 200

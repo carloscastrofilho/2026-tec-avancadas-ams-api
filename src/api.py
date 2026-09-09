@@ -1,5 +1,6 @@
 from flask import Flask
 from src.utils.config import Config
+from src.routes.router import Router
 
 class Api:
     # atributo de classe
@@ -21,6 +22,8 @@ class Api:
         
         # instância do flask
         self.app = Flask(self.cfg.APP_NAME)
+        self.router = Router(self.app)
+        self.router.register()
       
         
     # metodos
