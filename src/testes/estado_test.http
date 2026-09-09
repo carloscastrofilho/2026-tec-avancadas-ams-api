@@ -1,0 +1,9 @@
+
+GET http://localhost:3000/api/v1/estados
+
+###
+GET http://localhost:3000/api/v1/estados/1
+
+
+###
+GET http://localhost:3000/api/v1/estados/estado/sao paulo
